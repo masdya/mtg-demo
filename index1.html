@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THÔNG SỐ XỬ LÍ RÁC THẢI</title>
+    <link rel="stylesheet" href="./icon/fontawesome-free-6.1.2-web/fontawesome-free-6.1.2-web/css/all.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="main">
+        <div id="header">
+            <ul id="nav">
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Dữ liệu</a></li>
+                <li><a href="#">Dự án</a></li>
+                <li><a href="#">Giới thiệu</a></li>
+                <li><a href="#">Dịch vụ
+                    <i class=" nav-icon fa-solid fa-caret-down"></i>
+                </a>
+                <ul class="subnav">
+                    <li><a href="">Quản lý</a></li>
+                    <li><a href="">Bảo dưỡng</a></li>
+                    <li><a href="">Mua bán</a></li>
+                </ul>
+                </li>
+            </ul>
+            <!--begin seach button-->
+            <div class="search-bth">
+                <i class="search-icon fa-solid fa-magnifying-glass"></i>
+            </div>
+            <!--end seach button-->
+        </div>
+        <div id="slider">
+            <div class="text-content">
+                <h class="text-heading">Thông số của môi trường</h>
+                <p class="text-heading">Dịch vụ hàng đầu Việt Nam</p>
+
+            </div>
+        </div>
+        <div id="content">
+            <div class="content-section">
+                <div class="place-list">
+                    <div class="place-item">
+                        <img src="./img/conservatory-g752c633f0_1920.jpg" alt="Ảnh 1" class="place-img">
+                        <h3 class="place-local">Khu vực 1</h3>
+                        <p class="place-time">09/11/2022</p>
+                        <button href="#" class="place-more js-show-more">Chi tiết</button>
+                    </div>
+                    <div class="place-item">
+                        <img src="./img/torrent-gd4e9cf054_1920.jpg" alt="Ảnh 2" class="place-img">
+                        <h3 class="place-local">Khu vực 2</h3>
+                        <p class="place-time">09/11/2022</p>
+                        <button href="#" class="place-more js-show-more">Chi tiết</button>
+
+                    </div>
+                    <div class="place-item">
+                        <img src="./img/wind-power-plant-ge426ad086_1920.jpg" alt="Ảnh 1" class="place-img">
+                        <h3 class="place-local">Khu vực 3</h3>
+                        <p class="place-time">09/11/2022</p>
+                        <button href="#" class="place-more js-show-more">Chi tiết</button>
+
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <div class="place-list">
+                    <div class="place-item">
+                        <img src="./img/hd-wallpaper-g32f954cb9_1920.jpg" alt="Ảnh 4" class="place-img">
+                        <h3 class="place-local">Khu vực 4</h3>
+                        <p class="place-time">09/11/2022</p>
+                        <button href="#" class="place-more js-show-more">Chi tiết</button>
+                    </div>
+                    <div class="place-item">
+                        <img src="./img/road-gfb2824d49_1920.jpg" alt="Ảnh 5" class="place-img">
+                        <h3 class="place-local">Khu vực 5</h3>
+                        <p class="place-time">09/11/2022</p>
+                        <button href="#" class="place-more js-show-more">Chi tiết</button>
+
+                    </div>
+                    <div class="place-item">
+                        <img src="./img/rice-plantation-gb4b1727b3_1920.jpg" alt="Ảnh 6" class="place-img">
+                        <h3 class="place-local">Khu vực 6</h3>
+                        <p class="place-time">09/11/2022</p>
+                        <button href="#" class="place-more js-show-more">Chi tiết</button>
+
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal js-modal">
+        <div class="modal-container">
+            <div class="modal-close js-modal-close">
+                <i class="fas fa-circle-xmark"></i>
+            </div>
+            <header class="modal-header">
+                <i class="modal-icon icon fa-sharp fa-solid fa-seedling"></i>
+                Thông số
+            </header>
+
+            <div class="modal-body">
+                <div class="modal-item">Press:100.50 PA</div>
+                <div class="modal-item">Temp: 129.00 oC</div>
+                <div class="modal-item">Flow: 29696.00 m3/h</div>
+                <div class="modal-item">PM:	51.00 mg/Nm3</div>
+                <div class="modal-item">SO2:	50.50 mg/Nm3</div>
+                <div class="modal-item">NOx:	278.00 mg/Nm3</div>
+                <div class="modal-item">CO:	528.00 mg/Nm3</div>
+                <div class="modal-item">O2:	16.00 %</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const showBtns = document.querySelectorAll('.js-show-more')
+        const modal = document.querySelector('.js-modal')
+        const modalclose = document.querySelector('.js-modal-close')
+
+        function showMore() {
+            modal.classList.add('open')
+        }
+
+        function hideshowmore() {
+            modal.classList.remove('open')
+        }
+
+        for (const showBtn of showBtns) {
+            showBtn.addEventListener('click', showMore)
+        }
+        modalclose.addEventListener('click', hideshowmore)
+    </script>
+</body>
+</html>
